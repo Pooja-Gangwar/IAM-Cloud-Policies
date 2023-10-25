@@ -1,9 +1,9 @@
 ```
-- IAM_Authenticator_Readme.md
-- pre-requisite:
-- ------------
-- conjur account
-- IAM Role arn
+IAM_Authenticator_Readme.md
+pre-requisite:
+------------
+conjur account
+IAM Role arn
 
 - conjur policy load -f authn-iam-aws-prod.yml -b conjur/authn-iam
 - conjur authenticator enable --id authn-iam/prod
