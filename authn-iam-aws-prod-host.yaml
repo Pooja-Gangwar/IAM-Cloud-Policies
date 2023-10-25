@@ -1,0 +1,17 @@
+#conjur policy load -f authn-iam-aws-prod-host.yaml -b data
+- !policy
+  id: myspace
+  body:
+    # Create a group to hold the hosts
+    - !group workloads
+
+    # Add hosts. The ID of each host needs to match the AWS ARN (i.e. AccountID/AWS role) of the AWS resource that it represents
+    - !host
+      id: 601277729239/InstanceReadJenkinsExecutorHostFactoryToken #AccountID/AWSrole
+      annotations:
+        authn/api-key: true
+
+        # Add the host into the group
+    - !grant
+      role: !group workloads
+      member: !host 601277729239/InstanceReadJenkinsExecutorHostFactoryToken
