@@ -1,0 +1,4 @@
+#conjur policy load -f clients-ec2-apps-grants.yaml -b conjur/authn-iam/prod
+- !grant
+  role: !group clients
+  member: !group /data/myspace/workloads
