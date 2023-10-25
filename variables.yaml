@@ -1,0 +1,11 @@
+#conjur policy load -b data -f variables.yaml
+#conjur variable set -i data/database/username -v "aws_role_as_username"
+#conjur variable set -i data/database/password -v "trustedAWSRole@password"
+- &variables
+    - !variable database/username
+    - !variable database/password
+
+- !permit
+  resources: *variables
+  role: !host myspace/601277729239/InstanceReadJenkinsExecutorHostFactoryToken
+  privileges: [read,execute]
