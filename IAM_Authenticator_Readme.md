@@ -2,8 +2,8 @@
 IAM_Authenticator_Readme.md
 pre-requisite:
 ------------
-conjur account
-IAM Role arn
+* conjur account
+* IAM Role arn
 
 ### load the policies
 ```
