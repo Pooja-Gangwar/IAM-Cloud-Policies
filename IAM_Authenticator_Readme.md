@@ -1,9 +1,4 @@
-## pre-requisite:
-------------
-* conjur account
-* IAM Role arn
-
-### load the policies
+### commands load the policies
 ```
 - conjur policy load -f authn-iam-aws-prod.yml -b conjur/authn-iam
 - conjur authenticator enable --id authn-iam/prod
