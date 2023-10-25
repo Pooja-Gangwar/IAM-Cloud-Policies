@@ -1,10 +1,10 @@
 ### commands load the policies
 ```
-- conjur policy load -f authn-iam-aws-prod.yml -b conjur/authn-iam
-- conjur authenticator enable --id authn-iam/prod
-- conjur policy load -f authn-iam-aws-prod-host.yaml -b data
-- conjur policy load -f clients(ec2-apps)-grants.yaml -b conjur/authn-iam/prod
-- conjur policy load -b data -f variables.yaml
+* conjur policy load -f authn-iam-aws-prod.yml -b conjur/authn-iam
+* conjur authenticator enable --id authn-iam/prod
+* conjur policy load -f authn-iam-aws-prod-host.yaml -b data
+* conjur policy load -f clients(ec2-apps)-grants.yaml -b conjur/authn-iam/prod
+* conjur policy load -b data -f variables.yaml
 ```
 ### cloud configuration Details and variable:
 ```
