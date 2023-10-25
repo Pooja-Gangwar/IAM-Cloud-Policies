@@ -1,6 +1,4 @@
-
-IAM_Authenticator_Readme.md
-pre-requisite:
+## pre-requisite:
 ------------
 * conjur account
 * IAM Role arn
