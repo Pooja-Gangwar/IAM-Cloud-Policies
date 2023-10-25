@@ -18,5 +18,5 @@ IAM Role arn
 * service_id: prod
 * host: host/data/myspace/601277729239/InstanceReadJenkinsExecutorHostFactoryToken
 * variables: data/database/username "aws_role_as_username"
-            data/database/password "trustedAWSRole@password"
+*            data/database/password "trustedAWSRole@password"
 
