@@ -1,4 +1,4 @@
-``
+
 IAM_Authenticator_Readme.md
 pre-requisite:
 ------------
@@ -13,10 +13,10 @@ IAM Role arn
 - conjur policy load -b data -f variables.yaml
 
 ### cloud configuration Details and variable:
-- conjur account: conjur
-- conjur_cloud_url: https://edgejwttest.secretsmgr.integration-cyberark.cloud/api
-- service_id: prod
-- host: host/data/myspace/601277729239/InstanceReadJenkinsExecutorHostFactoryToken
-- variables: data/database/username "aws_role_as_username"
+* conjur account: conjur
+* conjur_cloud_url: https://edgejwttest.secretsmgr.integration-cyberark.cloud/api
+* service_id: prod
+* host: host/data/myspace/601277729239/InstanceReadJenkinsExecutorHostFactoryToken
+* variables: data/database/username "aws_role_as_username"
             data/database/password "trustedAWSRole@password"
-``
+
