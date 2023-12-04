@@ -1,0 +1,14 @@
+#conjur policy load -f authn-iam-aws-prod.yml -b conjur/authn-iam
+#conjur authenticator enable --id authn-iam/prod
+- !policy
+  id: prod
+  body:
+  - !webservice
+  
+  # Group of hosts that can authenticate using this IAM Authenticator
+  - !group clients
+ 
+  - !permit
+    role: !group clients
+    privilege: [ read, authenticate ]
+    resource: !webservice
